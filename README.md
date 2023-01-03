@@ -12,7 +12,7 @@ To deploy this workbook, you need to follow these steps:
 
 ## Notes:
 - Run The ps1 script as **admin**
-- To deploy this workbook, you need in the Azure tenant an account with at least the **Monitoring Contributor role**
+- To deploy this workbook, you need in the Azure tenant a account with at least the **Monitoring Contributor role**
 - All data will immediately be available
 - Because the Workbook is processing a lot of data, it can occur that you see some errors like 'Please provide below info when asking for support:...'
   - When you receive these, just click the '*refresh workbook*' button. This is a bottleneck that can occur.
