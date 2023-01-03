@@ -1,6 +1,6 @@
 # 45Degrees - FinOps Tool
 
-To deploy this workbook, you need to follow these steps: 
+## Installation procedure
 1. Run the '*CreateAzureResources.ps1*' PowerShell script to create all requirements and to deploy the Workbook
 2. Open the '*Azure portal*', go to '*Monitor*', select on the left '*[Workbooks](https://portal.azure.com/#view/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/~/workbooks)*' and click on the '*45Degrees - FinOps tool*' workbook
 3. Click on the '*edit*' button of the workbook
