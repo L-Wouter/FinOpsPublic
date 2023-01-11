@@ -25,5 +25,4 @@ resource workbook 'Microsoft.Insights/workbooks@2022-04-01' = {
     sourceId: workbookSourceId
 
   }
-
 }
