@@ -4,7 +4,7 @@
 1.	Sign in to https://portal.azure.com 
 2.	Open the Cloud Shell 
 3.	Configure the shell and make sure to use the PowerShell CLI
-4.	Paste and run the following script
+4.	Paste and run the following code
 > `Invoke-WebRequest -Uri https://raw.githubusercontent.com/L-Wouter/FinOpsPublic/main/install_FinOpsTool.ps1 -OutFile .\install_FinOpsTool.ps1; .\install_FinOpsTool.ps1`
 
 5.	The workbook is now created. Open the 'Azure portal', go to 'Monitor', select on the left 'Workbooks' (or click this link) and click on the '45Degrees - FinOps tool' workbook
