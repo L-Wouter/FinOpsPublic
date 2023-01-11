@@ -1,14 +1,18 @@
 # 45Degrees - FinOps Tool
 
 ## Installation procedure
-1. Run the '*CreateAzureResources.ps1*' PowerShell script to create all requirements and to deploy the Workbook
-2. Open the '*Azure portal*', go to '*Monitor*', select on the left '*[Workbooks](https://portal.azure.com/#view/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/~/workbooks)*' and click on the '*45Degrees - FinOps tool*' workbook
-3. Click on the '*edit*' button of the workbook
-4. Click on the '*advanced editor*' (code brackets) button
-5. Paste all content from '*workbookContent.json*' into the '*Gallery Template*' and click on '*Apply*'
-6. Let all code process and click on the '*save*' button
-7. Click the '*Done editing*' button
-8. The Workbook is now ready to use! 
+1.	Sign in to https://portal.azure.com 
+2.	Open the Cloud Shell 
+3.	Configure the shell and make sure to use the PowerShell CLI
+4.	Paste and run the following code
+> `Invoke-WebRequest -Uri https://raw.githubusercontent.com/L-Wouter/FinOpsPublic/main/install_FinOpsTool.ps1 -OutFile .\install_FinOpsTool.ps1; .\install_FinOpsTool.ps1`
+
+5.	The workbook is now created. Open the 'Azure portal', go to 'Monitor', select on the left 'Workbooks' (or click this link) and click on the '45Degrees - FinOps tool' workbook
+6.	Click on the 'edit' button of the workbook and after this click on the advanced editor (code brackets) button
+7.	Paste all content from 'workbookContent.json' into the 'Gallery Template' and click on 'Apply'
+8.	Let all code process and click on the 'save' button, after this click the 'Done editing' button
+9.	The Workbook is ready to use!
+
 
 ## Notes:
 - Run The ps1 script as **admin**
