@@ -12,8 +12,8 @@ resource workbook 'Microsoft.Insights/workbooks@2022-04-01' = {
   name: WorkbookName
   location: Location
   tags: {
-    tagName1: tagName1
-    tagName2: tagName2
+    Company: tagName1
+    Department: tagName2
   }
   kind: 'shared'
   properties: {
