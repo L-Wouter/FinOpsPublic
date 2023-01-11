@@ -27,7 +27,7 @@ Connect-AzAccount
 # Create Resource Group
 Write-Host "`nCreating Azure Resource Group...`n" -ForegroundColor Magenta
 $error.clear()
-try {   New-AzResourceGroup -Name $nameRg -Location $location -Tag @{tagName1=$tagName1;tagName2=$tagName2} }
+try {   New-AzResourceGroup -Name $nameRg -Location $location -Tag @{Company=$tagName1;Department=$tagName2} }
 catch { Write-Host "Error occured while creating resource group" -ForegroundColor Red
         Write-Warning $Error[0]}
 if (!$error) {Write-Host "Resource group successfully created" -ForegroundColor Green }
