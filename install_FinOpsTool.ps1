@@ -6,7 +6,7 @@ $date = Get-Date -Format "MM-dd-yyyy"
 $deploymentName = "FinOps"+"$date"
 $tagName1 = "45Degrees"
 $tagName2 = "FinOps"
-$TemplateFileLocation = ".\main.bicep"
+$TemplateFileLocation = "https://raw.githubusercontent.com/L-Wouter/FinOpsPublic/main/main.bicep"
 
 # Check if Az module is installed, if not it will be installed
 if (Get-Module -ListAvailable -Name Az ) {
@@ -44,5 +44,11 @@ if (!$error) {  Write-Host "Microsoft.insights successfully registered. Waiting 
 # Wait 20 seconds to be sure that everything is processed
 Start-Sleep -Seconds 20
 
-
-if (!$error) {  Write-Host "All prerequisites are completed." -ForegroundColor Green}
+# Create Workbook using the bicep file
+Write-Host "`nCreating Azure Workbook...`n" -ForegroundColor Magenta
+$error.clear()
+try {   New-AzResourceGroupDeployment -Name $deploymentName -ResourceGroupName $nameRg -TemplateFile $TemplateFileLocation}
+catch { Write-Host "Error occured while creating workbook" -ForegroundColor Red
+        Write-Warning $Error[0]
+    }
+if (!$error) {  Write-Host "Workbook successfully created" -ForegroundColor Green}
